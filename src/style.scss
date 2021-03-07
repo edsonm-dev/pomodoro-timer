@@ -1,0 +1,253 @@
+
+//GENERAL
+%nomargin-padding {
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    @extend %nomargin-padding;
+    width: 100vw;
+    height:100vh;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+
+//app
+
+
+
+#appContainer{
+background:radial-gradient(circle ,#ffe8d6, #b7b7a4);
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center; 
+padding:auto;
+
+}
+
+.clock{
+height:50%;
+min-height:30rem;
+width:40%;
+min-width:30rem;
+margin:auto;
+display:grid;
+background: radial-gradient(circle at right bottom,#a3b7c4,#417291);
+border: thin solid #417291;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(5,1fr);
+padding:20px;
+box-shadow: 5px 10px 8px #888888;
+justify-items: center;
+align-items:center;
+color:#f1faee;
+//background-color: royalblue;
+grid-template-areas:'.  title title  '
+                    'session  time time'
+                    'break  time time'
+                    '.  time time'
+                    '.  ctrl ctrl';
+}
+
+
+#playpause2{
+    grid-area: playp2;
+
+}
+#sessionwrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items:center;
+    grid-area: session;
+    text-shadow: 2px 2px 4px darkslategray;
+    width:75%;
+}
+
+#breakwrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items:center;
+    grid-area: break;
+    text-shadow: 2px 2px 4px darkslategray;
+    width:75%;
+}
+
+.sessioncontrol{
+        
+        display:flex;
+        justify-content: space-between;
+        flex-direction:column;
+        width:100%;
+
+        
+        align-items: center;
+}
+.breakcontrol{
+        
+        display:flex;
+        justify-content: space-between;
+        flex-direction:column;
+        align-items: center;
+        width:100%;
+        
+
+    }
+.timewrapper{
+    grid-area: time;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-shadow: 2px 2px 4px darkslategray;
+
+}
+#timer-label{
+    grid-area: title;
+    display:block;
+    text-shadow: 2px 2px 4px darkslategray;
+
+    margin:auto;
+}
+.add{
+    color:#9d0208;
+    text-shadow: 2px 2px 4px darkslategray;
+    &:hover{
+        color:white;
+    }
+    &:active{
+        text-shadow: none;
+        position:relative;
+        top:1px;
+    }
+}
+.subtract{
+    color:#a8dadc;
+    text-shadow: 2px 2px 4px darkslategray;
+    &:hover{
+        color:white;
+    }
+    &:active{
+        text-shadow: none;
+        position:relative;
+        top:1px;
+    }
+}
+#control{
+    grid-area: ctrl;
+    display:flex;
+    justify-content:space-around;
+    text-shadow: 2px 2px 4px darkslategray;
+
+    width:50%;
+    
+    #reset{
+        &:hover{
+            color:white;
+        }
+        &:active{
+            text-shadow: none;
+            position:relative;
+            top:1px;
+        }
+    }
+    #start_stop{
+        &:hover{
+            color:white;
+        }
+        &:active{
+            text-shadow: none;
+            position:relative;
+            top:1px;
+        }
+    }
+    #playpause2{
+        &:hover{
+            color:white;
+        }
+        &:active{
+            text-shadow: none;
+            position:relative;
+            top:1px;
+        }
+    }
+
+
+}
+
+@media screen and(min-width:800px){
+    .navbar{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+
+    }
+    h1{
+        grid-column:1/2;
+        align-self: center;
+        justify-self:start;
+        margin-left:20px;
+
+    }
+    nav{
+        grid-column:3/4;
+        align-self: center;
+        justify-self:center;
+
+    }
+    li{
+        margin:0;
+    }
+    .timewrapper{
+        grid-area: time;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        border-style:solid;
+        border-color: #417291;
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px white,0 0 8px white;
+        width:20rem;
+        height:20rem;
+    
+    
+    
+    }
+    #sessionwrapper{
+ 
+        justify-content: center;
+        align-items:center;
+
+    }
+    .sessioncontrol{
+        
+        
+        
+        flex-direction:row;
+
+
+}
+    #breakwrapper{
+
+        justify-content: center;
+        align-items:center;
+    }
+    .breakcontrol{
+
+
+        
+        flex-direction:row;
+        
+
+
+    }
+
+}

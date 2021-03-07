@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Edson Jorge Matsimbe">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./src/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script src="./src/script.js"></script>
+</head>
+<body id="root">
+    <div id="appContainer">
+        <div class="clock">
+            <div id="control">
+                <div id="reset">
+                    <i  class="fas fa-redo-alt fa-2x"></i>
+                </div>
+                <div id="start_stop">
+                    <i id="startbtn" class="fas fa-play fa-2x"></i>
+                </div>
+
+            </div>
+            
+            <h1 id="timer-label">Session</h1>
+            <div id="sessionwrapper">
+                <h2 id="session-length">25</h2>    
+                <div class="sessioncontrol">
+                    <div class="add">
+                        <i id="session-increment" class="fas fa-plus fa-2x"></i>
+                    </div>
+                    
+                    <h3 id="session-label">Session</h3>
+                    <div class="subtract">
+                        <i id="session-decrement" class="fas fa-minus fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="breakwrapper">
+                <h2 id="break-length">5</h2>
+                <div class="breakcontrol">
+                    <div class="add">
+                        <i id="break-increment" class="fas fa-plus fa-2x"></i>
+                    </div>
+                    
+                    <h3 id="break-label">Break</h3>
+                    <div class="subtract">
+                        <i id="break-decrement" class="fas fa-minus fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="timewrapper">
+                <h1 id="time-left">Time</h1>
+                <audio id="beep">
+                    <source src="https://www.soundjay.com/phone/telephone-ring-03a.mp3" type="audio/mpeg">>
+                </audio>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
